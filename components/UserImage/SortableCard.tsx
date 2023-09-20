@@ -34,7 +34,7 @@ const SortableCard: FC<Props> = ({ id, path, title }) => {
           sizes="100vw"
           style={{ width: "100%", height: "100%" }}
           className="w-[100%] h-auto bg-slate-50"
-          alt=""
+          alt={title}
         />
       </div>
       <h1 className="bg-white max-w-[250px] text-black text-[0.75rem] px-[3px] ">
