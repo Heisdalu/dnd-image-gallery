@@ -89,34 +89,5 @@ export const data: {
     blurHash: "LMGbbQ-qD=tQ9W9Zw}xCx]R*S0t7",
     pic: "https://images.unsplash.com/photo-1687360441027-27e70655b27e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjA2NDJ8MXwxfGFsbHw2fHx8fHx8Mnx8MTY5NTA1MzUzN3w&ixlib=rb-4.0.3&q=80&w=400",
   },
-  {
-    id: 16,
-    title: "a building with stone steps leading up to a door",
-    blurHash: "LLI}bBIU-;4n58V@kCae8^xvRj-;",
-    pic: "https://images.unsplash.com/photo-1682917595484-41b62dc54320?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjA2NDJ8MHwxfGFsbHw3fHx8fHx8Mnx8MTY5NTA1MzUzN3w&ixlib=rb-4.0.3&q=80&w=400",
-  },
-  {
-    id: 17,
-    title: "a bowl of food sitting on top of a wooden table",
-    blurHash: "LIEnnm-;?Zkq^if+-nNt0fRisRE1",
-    pic: "https://images.unsplash.com/photo-1693922876041-7fb22341f33a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjA2NDJ8MHwxfGFsbHw4fHx8fHx8Mnx8MTY5NTA1MzUzN3w&ixlib=rb-4.0.3&q=80&w=400",
-  },
-  {
-    id: 18,
-    title: "an aerial view of a desert with rocks and sand",
-    blurHash: "LpE.-8s:axo0~qoeWBjZ?vaye.ay",
-    pic: "https://images.unsplash.com/photo-1682687220067-dced9a881b56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjA2NDJ8MXwxfGFsbHwxMXx8fHx8fDJ8fDE2OTUwNTM1Mzd8&ixlib=rb-4.0.3&q=80&w=400",
-  },
-  {
-    id: 19,
-    title: "a woman standing on top of a sandy beach",
-    blurHash: "LPDJ6ZM_RPj[.TRjRij[IpbcWBa}",
-    pic: "https://images.unsplash.com/photo-1694536591647-a04dc2e141ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjA2NDJ8MHwxfGFsbHwxNXx8fHx8fDJ8fDE2OTUwNTM1Mzd8&ixlib=rb-4.0.3&q=80&w=400",
-  },
-  {
-    id: 20,
-    title: "a row of old books sitting on a shelf",
-    blurHash: "LLD+#lo}Mx%gD%WBt7Rj0KV@t7RP",
-    pic: "https://images.unsplash.com/photo-1694180846895-5d97f0b4ad3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjA2NDJ8MHwxfGFsbHwxN3x8fHx8fDJ8fDE2OTUwNTM1Mzd8&ixlib=rb-4.0.3&q=80&w=400",
-  },
+  
 ];
