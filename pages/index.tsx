@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { data } from "@/data/data";
 import Header from "@/components/Header/Header";
 import ImageList from "@/components/Images/ImageList";
-import { Context } from "@/context/context";
+import { Context } from "@/context/Context";
 import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,6 +14,7 @@ export default function Home() {
 
   if (isAuthenticated) {
     router.push("/gallery");
+    return <div></div>;
   }
 
   if (loading) {
