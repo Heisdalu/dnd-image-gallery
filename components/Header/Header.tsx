@@ -13,9 +13,7 @@ const Header: FC<HeaderProps> = ({ isAuthenticated }) => {
           Your Gallery
         </h1>
       ) : (
-        <Link href="/login" className="border-1 rounded-[6px] py-[0.5rem] px-1">
-          Login
-        </Link>
+        ""
       )}
     </div>
   );
