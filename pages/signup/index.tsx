@@ -1,17 +1,12 @@
-import InputForm from "@/components/InputForm/InputForm";
 import { useFormik } from "formik";
-import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { firebaseAuth } from "@/firebase/config";
-import { useRouter } from "next/router";
+import InputForm from "@/components/InputForm/InputForm";
+import { FC, useState } from "react";
 import { validation } from "@/data/validation";
+import { useRouter } from "next/router";
+import { firebaseAuth } from "@/firebase/config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
-interface obj {
-  email: string;
-  password: string;
-}
-
-const Login = () => {
+const SignUp: FC = () => {
   const [request, setRequest] = useState({
     error: false,
     loading: false,
@@ -31,7 +26,7 @@ const Login = () => {
         setRequest((prev) => ({ ...prev, loading: true }));
 
         try {
-          const result = await signInWithEmailAndPassword(
+          const result = await createUserWithEmailAndPassword(
             firebaseAuth,
             values.email,
             values.password
@@ -46,9 +41,7 @@ const Login = () => {
         } catch (e: any) {
           setRequest((prev) => ({
             ...prev,
-            errorMessage: e.message.includes("invalid-login-credentials")
-              ? "Invalid credentials"
-              : e.messsage,
+            errorMessage: e.messsage,
             error: true,
           }));
 
@@ -66,15 +59,15 @@ const Login = () => {
       },
     });
 
-  //   console.log(request);
-
   return (
     <div>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col h-[500px] mx-auto max-w-[400px] border-1 mt-[5rem] py-1 px-2"
       >
-        <h1 className="text-center mb-[2rem] text-[2rem] underline">Login</h1>
+        <h1 className="text-center mb-[2rem] text-[2rem] underline">
+          Sign up to account
+        </h1>
 
         <div className="space-y-1">
           <InputForm
@@ -114,4 +107,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default SignUp;
