@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import InputForm from "@/components/InputForm/InputForm";
-import { FC, useState } from "react";
+import { FC, useState, useContext } from "react";
+import { Context } from "@/context/Context";
 import { validation } from "@/data/validation";
 import { useRouter } from "next/router";
 import { firebaseAuth } from "@/firebase/config";
@@ -12,6 +13,7 @@ const SignUp: FC = () => {
     loading: false,
     errorMessage: "",
   });
+  const { loading, isAuthenticated } = useContext(Context);
 
   const router = useRouter();
 
@@ -58,6 +60,19 @@ const SignUp: FC = () => {
         }
       },
     });
+
+  if (isAuthenticated) {
+    router.push("/gallery");
+    return <div></div>;
+  }
+
+  if (loading) {
+    return (
+      <div className="h-[500px] grid place-items-center animate-pulse">
+        Authenticating... Please wait
+      </div>
+    );
+  }
 
   return (
     <div>

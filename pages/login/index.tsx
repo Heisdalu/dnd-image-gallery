@@ -1,10 +1,11 @@
 import InputForm from "@/components/InputForm/InputForm";
 import { useFormik } from "formik";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "@/firebase/config";
 import { useRouter } from "next/router";
 import { validation } from "@/data/validation";
+import { Context } from "@/context/Context";
 
 interface obj {
   email: string;
@@ -17,6 +18,8 @@ const Login = () => {
     loading: false,
     errorMessage: "",
   });
+
+  const { loading, isAuthenticated } = useContext(Context);
 
   const router = useRouter();
 
@@ -67,6 +70,18 @@ const Login = () => {
     });
 
   //   console.log(request);
+  if (isAuthenticated) {
+    router.push("/gallery");
+    return <div></div>;
+  }
+
+  if (loading) {
+    return (
+      <div className="h-[500px] grid place-items-center animate-pulse">
+        Authenticating... Please wait
+      </div>
+    );
+  }
 
   return (
     <div>
